@@ -2,16 +2,21 @@ Summary:	A graphical tool for configuration of firewall
 Summary(pl):	Graficzne narzêdzie do konfiguracji ogniomurka
 Name:		guarddog
 Version:	2.3.2
-Release:	1
+Release:	1.1
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://www.simonzone.com/software/guarddog/%{name}-%{version}.tar.gz
 # Source0-md5:	6b4cc6d0fdfe02486203372481b072e1
+Patch0:		%{name}-desktop.patch
 URL:		http://www.simonzone.com/software/guarddog/
-BuildRequires:	qt-devel >= 3.0.5
+BuildRequires:	kdebase-devel >= 3.1
+BuildRequires:	qt-devel >= 3.1
+BuildRequires:	rpmbuild(macros) >= 1.129
+Requires:	kdebase-core >= 3.1
+Requires:	gawk
+Requires:	iptables
+Requires:	sed
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define         _htmldir        /usr/share/doc/kde/HTML
 
 %description
 Guarddog is a firewall configuration utility for Linux systems.
@@ -30,19 +35,24 @@ skomplikowanych skryptów pow³oki i regu³ek ipchains/iptables.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
-kde_appsdir="%{_applnkdir}"; export kde_appsdir
-kde_htmldir="%{_htmldir}"; export kde_htmldir
-kde_icondir="%{_pixmapsdir}"; export kde_icondir
 %configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_desktopdir}
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	kde_htmldir=%{_kdedocdir}
+
+mv -f $RPM_BUILD_ROOT%{_datadir}/applnk/System/%{name}.desktop \
+	$RPM_BUILD_ROOT%{_desktopdir}/%{name}.desktop
+
+rm -rf $RPM_BUILD_ROOT%{_iconsdir}/locolor
 
 %find_lang %{name} --with-kde
 
@@ -54,5 +64,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/apps/guarddog
-%{_pixmapsdir}/*/*/apps/*.png
-%{_applnkdir}/System/*.desktop
+%{_iconsdir}/hicolor/*/apps/*.png
+%{_desktopdir}/*.desktop
