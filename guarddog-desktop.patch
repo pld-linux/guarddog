@@ -1,0 +1,22 @@
+--- kde/guarddog.desktop.orig	2004-10-04 22:36:34.087460608 +0200
++++ kde/guarddog.desktop	2004-10-04 22:37:57.129836248 +0200
+@@ -1,14 +1,18 @@
+ [Desktop Entry]
++Encoding=UTF-8
++Name=Guarddog
++Name[pl]=Guarddog
+ Comment=Firewall utility
++Comment[pl]=Narzędzie zapory ogniowej
+ DocPath=guarddog/index.html
+ Exec=guarddog
+ Icon=guarddog
+-Name=Guarddog
+ SwallowExec=
+ SwallowTitle=
+ Terminal=false
+ TerminalOptions=
+ Type=Application
++Categories=System;
+ X-KDE-RootOnly=true
+ X-KDE-SubstituteUID=true
+ X-KDE-Username=root
