@@ -43,14 +43,14 @@ skomplikowanych skryptów pow³oki i regu³ek ipchains/iptables.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_desktopdir}
+install -d $RPM_BUILD_ROOT%{_desktopdir}/kde
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	kde_htmldir=%{_kdedocdir}
 
 mv -f $RPM_BUILD_ROOT%{_datadir}/applnk/System/%{name}.desktop \
-	$RPM_BUILD_ROOT%{_desktopdir}/%{name}.desktop
+	$RPM_BUILD_ROOT%{_desktopdir}/kde/%{name}.desktop
 
 rm -rf $RPM_BUILD_ROOT%{_iconsdir}/locolor
 
@@ -65,4 +65,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/apps/guarddog
 %{_iconsdir}/hicolor/*/apps/*.png
-%{_desktopdir}/*.desktop
+%{_desktopdir}/kde/*.desktop
