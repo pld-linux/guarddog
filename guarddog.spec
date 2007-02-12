@@ -1,5 +1,5 @@
 Summary:	A graphical tool for configuration of firewall
-Summary(pl):	Graficzne narzêdzie do konfiguracji ogniomurka
+Summary(pl.UTF-8):   Graficzne narzÄ™dzie do konfiguracji ogniomurka
 Name:		guarddog
 Version:	2.5.1
 Release:	1
@@ -25,13 +25,13 @@ who are not experts in TCP/IP networking and security, and those users
 who don't want the hastle of dealing with cryptic shell scripts and
 ipchains/iptables parameters.
 
-%description -l pl
-Guarddog jest narzêdziem do konfiguracji ogniomurka dla systemów
-Linux. Guarddog zosta³ stworzony dla dwóch grup u¿ytkowników, dla
-pocz±tkuj±cych lub ¶rednio zaawansowanych u¿ytkowników, którzy nie s±
-ekspertami w kwestii sieci oraz jej bezpieczeñstwa, oraz dla
-u¿ytkowników, którzy nie chc± traciæ czasu na tworzenie
-skomplikowanych skryptów pow³oki i regu³ek ipchains/iptables.
+%description -l pl.UTF-8
+Guarddog jest narzÄ™dziem do konfiguracji ogniomurka dla systemÃ³w
+Linux. Guarddog zostaÅ‚ stworzony dla dwÃ³ch grup uÅ¼ytkownikÃ³w, dla
+poczÄ…tkujÄ…cych lub Å›rednio zaawansowanych uÅ¼ytkownikÃ³w, ktÃ³rzy nie sÄ…
+ekspertami w kwestii sieci oraz jej bezpieczeÅ„stwa, oraz dla
+uÅ¼ytkownikÃ³w, ktÃ³rzy nie chcÄ… traciÄ‡ czasu na tworzenie
+skomplikowanych skryptÃ³w powÅ‚oki i reguÅ‚ek ipchains/iptables.
 
 %prep
 %setup -q
