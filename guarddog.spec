@@ -1,5 +1,5 @@
 Summary:	A graphical tool for configuration of firewall
-Summary(pl.UTF-8):   Graficzne narzędzie do konfiguracji ogniomurka
+Summary(pl.UTF-8):	Graficzne narzędzie do konfiguracji ogniomurka
 Name:		guarddog
 Version:	2.5.1
 Release:	1
