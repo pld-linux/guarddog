@@ -10,7 +10,7 @@ Source0:	http://www.simonzone.com/software/guarddog/%{name}-%{version}.tar.gz
 Patch0:		%{name}-desktop.patch
 URL:		http://www.simonzone.com/software/guarddog/
 BuildRequires:	kdebase-devel >= 3.1
-BuildRequires:	qt-devel >= 3.1
+BuildRequires:	qt-devel >= 6:3.1
 BuildRequires:	rpmbuild(macros) >= 1.129
 Requires:	gawk
 Requires:	iptables
