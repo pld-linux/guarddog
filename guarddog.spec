@@ -1,12 +1,12 @@
 Summary:	A graphical tool for configuration of firewall
 Summary(pl.UTF-8):	Graficzne narzędzie do konfiguracji ogniomurka
 Name:		guarddog
-Version:	2.5.1
+Version:	2.6.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://www.simonzone.com/software/guarddog/%{name}-%{version}.tar.gz
-# Source0-md5:	baa25ee6e20bb49a96259077e67ba097
+# Source0-md5:	a1535c4e3f668ea1de5a12f671e7af13
 Patch0:		%{name}-desktop.patch
 URL:		http://www.simonzone.com/software/guarddog/
 BuildRequires:	kdebase-devel >= 3.1
